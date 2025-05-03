@@ -25,6 +25,12 @@ credentials: true
 }
 app.use(cors(corsOption));
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+      succss: true,
+      message: "Backend Running Successfully"
+  })
+});
 //routes
 app.use("/api/v1/user",userRoute);
 app.use("/api/v1/message",messageRouter);
