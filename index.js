@@ -20,7 +20,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 const corsOption = {
-origin: 'http://localhost:5173',
+// origin: ['http://localhost:5173','https://chat-app-nu-nine-37.vercel.app'],
+origin: ['*'],
 credentials: true
 }
 app.use(cors(corsOption));
